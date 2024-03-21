@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class ProfileView extends StatelessWidget {
@@ -8,43 +6,23 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey,
-        title: const Text("My First App"),
-      ),
-      body: Column(crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            height: 200,
-            width: 100,
-            color: Colors.pink,
-            child: Text("Sunny"),
-          ),
-          SizedBox(height: 100,
-          width: 100,
-            child: Row(
-              children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.red,
-                  child: Text("Sunny"),
-                ),
-              ],
-            ),
-          ),
-          Row(
+        appBar: AppBar(
+          backgroundColor: Colors.green,
+          title: const Text("CarApp"),
+        ),
+        body: SingleChildScrollView(
+          child: Column(
             children: [
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.pink,
-                child: Text("Sunny"),
-              ),
+              Image.asset("assets/images/th (1).jpg"),
+             
+                  Image.network("https://tse2.mm.bing.net/th?id=OIP.zu6MzwXB5Fjaxf3Z3Q1x5wHaD1&pid=Api&P=0&h=220"),
+                  Image.network("https://tse4.mm.bing.net/th?id=OIP.17wkejkULtJRxr5-2_ATlAHaEK&pid=Api&P=0&h=220"),
+                  const TextField(
+                    decoration: InputDecoration(),
+                  ),
+                  ElevatedButton(onPressed:(){}, child: const Text("click me"))
             ],
           ),
-        ],
-      ),
-    );
+        ));
   }
 }
